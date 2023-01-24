@@ -1,0 +1,17 @@
+<template>
+  <lightning-card>
+    <lightning-button
+      label="View Details"
+      slot="actions"
+      onclick={playerClick}
+    ></lightning-button>
+    <img
+      src={player.photoUrl}
+      alt={player.title}
+      class="slds-align_absolute-center slds-var-m-around_medium"
+    />
+    <div class="slds-border_top">
+      <p class="slds-var-p-horizontal_small">{player.title}</p>
+    </div>
+  </lightning-card>
+</template>

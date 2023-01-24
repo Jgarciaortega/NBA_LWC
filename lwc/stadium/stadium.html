@@ -1,0 +1,25 @@
+<template>
+  <template if:true={stadium}>
+    <div class="slds-card">
+      <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+          <h1>
+            <span class="slds-page-header__title slds-truncate title" title="STADIUM">STADIUM</span>
+          </h1>
+          <ul>
+            <li>NAME: {stadium.name}</li>
+            <li>ADDRESS: {stadium.address}</li>
+            <li>CITY: {stadium.city}</li>
+            <li>STATE: {stadium.state}</li>
+            <li>COUNTRY: {stadium.country}</li>
+            <li>CAPACITY:{stadium.capacity}</li>
+          </ul>
+        </div>
+        <div class="slds-col effectShadow map">
+          <lightning-map map-markers={mapmarkers} zoom-level={zoomLevel}>
+          </lightning-map>
+        </div>
+      </div>
+    </div>
+  </template>
+</template>

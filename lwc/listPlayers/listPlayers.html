@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-align_absolute-center">
+      <template if:true={players}>
+        <div class="slds-grid slds-wrap ">
+          <template for:each={players} for:item="p">
+            <div key={p.id} class="slds-col slds-size_1-of-6">
+              <c-player
+                player={p}
+                team={team}
+                class="slds-col ficha"
+                onplayerclick={handlePlayerClick}
+              ></c-player>
+            </div>
+          </template>
+        </div>
+      </template>
+    </div>
+  </template>
